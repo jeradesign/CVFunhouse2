@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		425477862789391B00EBC6BC /* CVFunhouse2.docc in Sources */ = {isa = PBXBuildFile; fileRef = 425477852789391B00EBC6BC /* CVFunhouse2.docc */; };
 		425477872789391B00EBC6BC /* CVFunhouse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 425477842789391B00EBC6BC /* CVFunhouse2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A036D617780264A60A42977 /* Pods_CVFunhouse2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA08C3306C06D52C79F92CA9 /* Pods_CVFunhouse2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C282CF13ECA4157FE2F3E3B /* Pods-CVFunhouse2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVFunhouse2.release.xcconfig"; path = "Target Support Files/Pods-CVFunhouse2/Pods-CVFunhouse2.release.xcconfig"; sourceTree = "<group>"; };
 		425477812789391B00EBC6BC /* CVFunhouse2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVFunhouse2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		425477842789391B00EBC6BC /* CVFunhouse2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVFunhouse2.h; sourceTree = "<group>"; };
 		425477852789391B00EBC6BC /* CVFunhouse2.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CVFunhouse2.docc; sourceTree = "<group>"; };
+		66820C5ACA2C8ABB45BBA652 /* Pods-CVFunhouse2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVFunhouse2.debug.xcconfig"; path = "Target Support Files/Pods-CVFunhouse2/Pods-CVFunhouse2.debug.xcconfig"; sourceTree = "<group>"; };
+		DA08C3306C06D52C79F92CA9 /* Pods_CVFunhouse2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVFunhouse2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,17 +26,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A036D617780264A60A42977 /* Pods_CVFunhouse2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1F9C1E8A166D34F093EBE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66820C5ACA2C8ABB45BBA652 /* Pods-CVFunhouse2.debug.xcconfig */,
+				0C282CF13ECA4157FE2F3E3B /* Pods-CVFunhouse2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		425477772789391B00EBC6BC = {
 			isa = PBXGroup;
 			children = (
 				425477832789391B00EBC6BC /* CVFunhouse2 */,
 				425477822789391B00EBC6BC /* Products */,
+				3D1F9C1E8A166D34F093EBE3 /* Pods */,
+				5BDC89E747774676C990A55B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +70,14 @@
 			path = CVFunhouse2;
 			sourceTree = "<group>";
 		};
+		5BDC89E747774676C990A55B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA08C3306C06D52C79F92CA9 /* Pods_CVFunhouse2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4254778A2789391B00EBC6BC /* Build configuration list for PBXNativeTarget "CVFunhouse2" */;
 			buildPhases = (
+				2C8773443938D25E4F019ACF /* [CP] Check Pods Manifest.lock */,
 				4254777C2789391B00EBC6BC /* Headers */,
 				4254777D2789391B00EBC6BC /* Sources */,
 				4254777E2789391B00EBC6BC /* Frameworks */,
@@ -126,6 +152,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C8773443938D25E4F019ACF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CVFunhouse2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4254777D2789391B00EBC6BC /* Sources */ = {
@@ -259,6 +310,7 @@
 		};
 		4254778B2789391B00EBC6BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66820C5ACA2C8ABB45BBA652 /* Pods-CVFunhouse2.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -286,6 +338,7 @@
 		};
 		4254778C2789391B00EBC6BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C282CF13ECA4157FE2F3E3B /* Pods-CVFunhouse2.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
